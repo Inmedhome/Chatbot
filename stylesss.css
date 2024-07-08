@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+  perspective: 1000px;
+  background-color: black;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-style: preserve-3d;
+}
+
+.ball {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  animation: moveBall 20s linear infinite;
+  opacity: 0;
+  box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.5), 0 0 10px 2px rgba(0, 255, 0, 0.5);
+}
+
+@keyframes moveBall {
+  0% {
+    transform: translate3d(0, 0, -1000px);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(0, 0, 2000px);
+    opacity: 0;
+  }
+}
+
+/* Additional CSS for login form */
+.login-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 1px 2px 5px rgba(225, 225, 225, 0.5);
+}
+
+.login-container:hover {
+  box-shadow: 2px 5px 10px rgba(0, 0, 255, 0.8);
+  background-color: rgba(225, 225, 225, 0.09);
+  animation: colorful22Shadow 15s infinite;
+}
+
+.login-container h2 {
+  font-size: 22px;
+  text-align: center;
+  color: white;
+  font-family: 'Rubik Mono One', sans-serif;
+}
+.login-container h1 {
+  font-size: 12px;
+  color: #e67300;
+  text-align: center;
+  font-family: 'Rubik Mono One', sans-serif;
+}
+
+.login-container h3 {
+  text-align: center;
+  color: white;
+  font-family: 'Tektur', cursive;
+  font-size: 10px;
+}
+
+.login-container input {
+  width: 85%;
+  padding: 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  margin-bottom: 10px;
+  border: 1px solid #8a8a8a;
+  border-radius: 10px;
+  box-shadow: 1px 3px 8px #7d7d7d;
+}
+
+.login-container input:hover {
+  border-radius: 5px;
+  color: black;
+  background-color: white;
+  box-shadow: 0 0 50px green;
+}
+
+.login-container button {
+  text-align: center;
+  width: 100%;
+  padding: 10px;
+  background-color: rgba(0, 80, 179, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  box-shadow: 0 5px 10px white;
+  font-family: 'Tektur', cursive;
+}
+
+.login-container button:hover {
+  background-color: #0c24c4 ;
+  box-shadow: 0 5px 10px white;
+}
+
+#message {
+  color: red;
+  text-align: center;
+  font-family: 'Tektur', cursive;
+}
+
+@keyframes colorful22Shadow {
+      0% { box-shadow: 0 10px 20px rgba(255, 140, 0, 0.9); }
+      20% { box-shadow: 0 10px 20px rgba(139, 0, 0, 0.9); }
+      40% { box-shadow: 0 10px 20px rgba(255, 69, 0, 0.9); }
+      60% { box-shadow: 0 10px 20px rgba(0, 0, 139, 0.9); }
+      80% { box-shadow: 0 10px 20px rgba(245, 245, 245, 0.9); }
+      100% { box-shadow: 0 10px 20px rgba(192, 192, 192, 0.9); }
+      }
+    @keyframes colorChange {
+      0% { background-position: 0%; }
+      50% { background-position: 100%; }
+      100% { background-position: 0%; }
+}
